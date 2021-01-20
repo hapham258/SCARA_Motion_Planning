@@ -10,3 +10,6 @@ This work is my final project in the course Robotics, taught by Dr. Giap Nguyen-
 <p align="center">
   <img src="Rviz.png" width="600" alt="accessibility text">
 </p>
+
+## Build and Run
+Just clone this workspace, catkin-make and run the start_model.launch file.
