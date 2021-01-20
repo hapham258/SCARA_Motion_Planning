@@ -1,5 +1,5 @@
 # SCARA_Motion_Planning
-Motion Planning for SCARA Robot Arm, implemented in C++, visualized with Qt-based GUI and Rviz.
+Motion Planning for SCARA Robot Arm, implemented in C++, visualized with Qt-GUI and Rviz.
 
 ## Summary
 This work is my final project in the course Robotics, taught by Dr. Giap Nguyen-Hoang.
