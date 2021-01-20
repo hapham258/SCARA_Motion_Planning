@@ -12,7 +12,7 @@ This work is my final project in the course Robotics, taught by Dr. Giap Nguyen-
 </p>
 
 ## Build and Run
-Use the following commands to download and compile the package.
+Use the following commands to download and compile the package (tested on Ubuntu 16.04 and 18.04)
 ```
 git clone https://github.com/hapham258/SCARA_Motion_Planning.git
 cd SCARA_Motion_Planning
