@@ -12,4 +12,11 @@ This work is my final project in the course Robotics, taught by Dr. Giap Nguyen-
 </p>
 
 ## Build and Run
-Just clone this workspace, catkin-make and run the start_model.launch file.
+Use the following commands to download and compile the package.
+,,,
+git clone https://github.com/hapham258/SCARA_Motion_Planning.git
+cd SCARA_Motion_Planning
+catkin_make
+source devel/setup.bash
+roslaunch launch/start_model.launch
+,,,
