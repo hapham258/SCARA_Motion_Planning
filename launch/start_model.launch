@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description"
+         command="$(find xacro)/xacro --inorder '$(find model)/urdf/robot.xacro'" />
+
+  <node pkg="gui" type="gui"  
+        name="gui" output="screen" />
+
+  <node pkg="model" type="tf_publisher" 
+        name="tf_publisher" />
+
+  <node pkg="rviz" type="rviz"
+        name="rviz" 
+        args="-d $(find model)/../../rviz/view_robot.rviz" />
+</launch>

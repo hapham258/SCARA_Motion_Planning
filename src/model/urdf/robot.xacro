@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<robot name="robot" 
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find model)/urdf/parameters.xacro" />
+
+<!-- FOOTPRINT -->
+  <link name="footprint" />
+
+<!-- BASE -->
+  <link name="base">
+    <visual>
+        <origin xyz="0 0 ${base_offset_from_z}" rpy="0 0 0" />
+        <geometry>
+            <cylinder length="${base_height}" radius="${base_radius}" />
+        </geometry>
+        <material name="White" />
+    </visual>     
+  </link>
+
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 ${base_height/2 - base_offset_from_z}" rpy="0 0 0" />
+    <parent link="footprint" />
+    <child link="base" />
+  </joint>
+
+<!-- SHOULDER -->
+  <link name="shoulder">
+    <visual>
+        <origin xyz="${shoulder_offset_from_x} 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="${shoulder_length} ${shoulder_width} ${shoulder_height}" />
+        </geometry>
+        <material name="White" />
+    </visual>     
+  </link>
+
+  <joint name="shoulder_joint" type="fixed">
+    <origin xyz="${a1} 0 ${d1}" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="shoulder" />
+  </joint>
+
+<!-- UPPERARM -->
+  <link name="upperarm">
+    <visual>
+        <origin xyz="${upperarm_offset_from_x} 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="${upperarm_length} ${upperarm_width} ${upperarm_height}" />
+        </geometry>
+        <material name="White" />
+    </visual>    
+  </link>
+
+  <joint name="upperarm_joint" type="fixed">
+    <origin xyz="${a2} 0 ${d2}" rpy="0 0 0" />
+    <parent link="shoulder" />
+    <child link="upperarm" />
+  </joint>
+
+<!-- FOREARM -->
+  <link name="forearm">
+    <visual>
+        <origin xyz="0 0 ${forearm_offset_from_z}" rpy="0 0 0" />
+        <geometry>
+            <cylinder length="${forearm_height}" radius="${forearm_radius}" />
+        </geometry>
+        <material name="Gray" />
+    </visual>   
+  </link>
+
+  <joint name="forearm_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="${alpha3} 0 0" />
+    <parent link="upperarm" />
+    <child link="forearm" />
+  </joint>
+
+</robot>
