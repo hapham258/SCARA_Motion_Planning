@@ -5,8 +5,8 @@ Motion Planning for SCARA Robot Arm, implemented in C++, visualized with Qt-GUI 
 This work is my final project in the course Robotics, taught by Dr. Giap Nguyen-Hoang.
 
 <p align="center">
-  <img src="GUI.png" alt="accessibility text">
+  <img src="GUI.png" width="400" alt="accessibility text">
 </p>
 <p align="center">
-  <img src="Rviz.png" alt="accessibility text">
+  <img src="Rviz.png" width="400" alt="accessibility text">
 </p>
